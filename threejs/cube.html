@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cube</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head>
+<body>
+    <script src="/home/paarth/Desktop/cube/three.min.js"></script>
+    <script>
+        var camera, scene, renderer;
+var geometry, material, mesh;
+
+init();
+
+
+function init() {
+
+	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
+	camera.position.z = 2;
+
+	scene = new THREE.Scene();
+
+	geometry = new THREE.BoxGeometry( 1, 1, 1 );
+	material = new THREE.MeshNormalMaterial();
+
+	mesh = new THREE.Mesh( geometry, material );
+	scene.add( mesh );
+
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	document.body.appendChild( renderer.domElement );
+
+}
+
+function showCube() {
+
+requestAnimationFrame( showCube );
+renderer.render( scene, camera );
+
+}
+
+showCube()
+
+function animate1() {
+
+	requestAnimationFrame( animate1 );
+
+	mesh.rotation.x += 0.001;
+	mesh.rotation.y += 0.001;
+
+	renderer.render( scene, camera );
+
+}
+
+function animate2() {
+
+requestAnimationFrame( animate2 );
+
+mesh.rotation.x += 0.01;
+mesh.rotation.y += 0.01;
+
+renderer.render( scene, camera );
+
+}
+
+function animate3() {
+
+requestAnimationFrame( animate3 );
+
+mesh.rotation.x += 0.1;
+mesh.rotation.y += 0.1;
+
+renderer.render( scene, camera );
+
+}
+
+	</script>
+	<div id="button1" class="button-section">
+		<button type="button" onclick="animate1()">speed 1</button>
+		<button type="button" onclick="animate2()">speed 2</button>
+		<button type="button" onclick="animate3()">speed 3</button>
+	</div>
+	
+    
+</body>
+</html>

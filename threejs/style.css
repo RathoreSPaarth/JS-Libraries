@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+}
+
+.button-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    padding-top: 0;
+    background-image: radial-gradient(blue,black);
+}
