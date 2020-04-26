@@ -1,0 +1,2 @@
+Implementation of Three.js javascript library to create a 3D rotating cube.
+The speed of rotation can also be controlled using buttons with the help of vanilla JS.
