@@ -7,5 +7,17 @@ body{
     justify-content: space-evenly;
     margin-top: 0;
     padding-top: 0;
-    background-image: radial-gradient(blue,black);
+     background-image: linear-gradient(to right,blue,black);
+
+}
+
+button{
+         border: none;
+        border-radius: 10px;
+        height: 10vh;
+        width: 20vh;
+        margin: 2vh;
+        background-color: #09d15e;
+        color: black;
+        font-size: 4vh;
 }
